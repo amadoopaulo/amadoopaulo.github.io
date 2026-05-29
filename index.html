@@ -11,13 +11,13 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --cream: #F7F4EF;
-    --dark: #1A1A18;
-    --mid: #3D3D39;
-    --muted: #7A7A74;
-    --accent: #2D5A3D;
-    --accent-light: #E8F0EB;
-    --border: #E2DED7;
+    --cream: #F4F5F2;
+    --dark: #323b4c;
+    --mid: #414c32;
+    --muted: #778464;
+    --accent: #414c32;
+    --accent-light: #E8EDE3;
+    --border: #D6DACE;
     --white: #FFFFFF;
   }
 
@@ -35,7 +35,7 @@
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
-    background: rgba(247,244,239,0.92);
+    background: rgba(244,245,242,0.92);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     z-index: 100;
@@ -478,7 +478,7 @@
 
   /* CONTATO */
   .contact-section {
-    background: var(--dark);
+    background: #323b4c;
     padding: 5rem 2rem;
   }
 
@@ -531,7 +531,7 @@
 
   /* FOOTER */
   footer {
-    background: #111;
+    background: #272e3a;
     text-align: center;
     padding: 1.5rem;
     font-size: 12px;
@@ -546,6 +546,29 @@
     nav { padding: 0 1rem; }
     .nav-links { gap: 1rem; }
     section { padding: 3.5rem 1.25rem; }
+  }
+
+  /* DECORATIVE */
+  .deco-strip {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    pointer-events: none;
+  }
+  .deco-strip svg { display: block; width: 100%; }
+
+  .hero-deco {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero { position: relative; }
+  .hero-inner { position: relative; z-index: 1; }
+
+  .deco-corner {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.18;
   }
 
   /* ANIMATIONS */
@@ -564,10 +587,10 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Paulo Henrique</div>
+  <div class="nav-logo">Paulo Henrique Amado</div>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#competencias">Skills</a></li>
+    <li><a href="#competencias">Competências</a></li>
     <li><a href="#experiencias">Experiências</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
@@ -575,12 +598,28 @@
 
 <!-- HERO -->
 <div class="hero">
+
+  <!-- Decoração fundo hero -->
+  <svg class="hero-deco" style="top:0;right:0;width:480px;height:480px;opacity:0.07;" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="380" cy="100" r="220" fill="#414c32"/>
+    <circle cx="440" cy="380" r="120" fill="#323b4c"/>
+    <circle cx="200" cy="420" r="80" fill="#778464"/>
+  </svg>
+  <svg class="hero-deco" style="bottom:0;left:0;width:320px;height:320px;opacity:0.06;" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="160" width="160" height="160" fill="#323b4c"/>
+    <rect x="80" y="80" width="160" height="160" fill="#778464" opacity="0.6"/>
+    <rect x="0" y="0" width="100" height="100" fill="#414c32"/>
+  </svg>
+  <svg class="hero-deco" style="top:80px;left:50%;width:200px;height:200px;opacity:0.05;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="100,0 200,200 0,200" fill="#414c32"/>
+  </svg>
+
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">Indisponível para oportunidades</div>
+      <div class="hero-tag" style="background: #FDECEA; color: #A32D2D;">Indisponível no momento</div>
       <h1>Analista<br><em>Financeiro Júnior</em><br>& Backoffice</h1>
       <p class="hero-desc">
-        22 anos de experiência acumulada em financeiro, fiscal e operações.
+        <strong>Paulo Henrique Amado</strong> — 22 anos, vasta experiência em financeiro, fiscal e operações.
         Contas a pagar/receber, NF-e, controle de estoque, estruturação de processos e KPIs.
       </p>
       <div class="hero-cta">
@@ -629,6 +668,29 @@
 
 <hr class="divider">
 
+<!-- DECO STRIP 1 -->
+<div class="deco-strip" style="background:#F4F5F2; padding: 0;">
+  <svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:60px;">
+    <rect x="0" y="20" width="80" height="8" fill="#414c32" opacity="0.15"/>
+    <rect x="100" y="28" width="40" height="4" fill="#778464" opacity="0.2"/>
+    <rect x="160" y="22" width="20" height="16" fill="#323b4c" opacity="0.1"/>
+    <circle cx="220" cy="30" r="10" fill="#414c32" opacity="0.12"/>
+    <circle cx="250" cy="30" r="5" fill="#778464" opacity="0.2"/>
+    <rect x="300" y="24" width="60" height="4" fill="#323b4c" opacity="0.1"/>
+    <polygon points="400,18 430,42 370,42" fill="#414c32" opacity="0.08"/>
+    <rect x="460" y="20" width="100" height="6" fill="#778464" opacity="0.15"/>
+    <circle cx="600" cy="30" r="18" fill="#323b4c" opacity="0.06"/>
+    <circle cx="640" cy="22" r="8" fill="#414c32" opacity="0.1"/>
+    <rect x="700" y="26" width="50" height="8" fill="#778464" opacity="0.12"/>
+    <polygon points="800,15 840,45 760,45" fill="#323b4c" opacity="0.07"/>
+    <rect x="880" y="22" width="30" height="14" fill="#414c32" opacity="0.1"/>
+    <circle cx="950" cy="30" r="12" fill="#778464" opacity="0.12"/>
+    <rect x="1000" y="24" width="80" height="5" fill="#323b4c" opacity="0.1"/>
+    <circle cx="1120" cy="28" r="6" fill="#414c32" opacity="0.15"/>
+    <rect x="1150" y="20" width="50" height="10" fill="#778464" opacity="0.1"/>
+  </svg>
+</div>
+
 <!-- SOBRE -->
 <section id="sobre">
   <div class="section-label">Quem sou</div>
@@ -674,6 +736,40 @@
 
 <hr class="divider">
 
+<!-- DECO STRIP 2 -->
+<div class="deco-strip" style="background:#F4F5F2;">
+  <svg viewBox="0 0 1200 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:80px;">
+    <rect x="0" y="0" width="1200" height="80" fill="none"/>
+    <rect x="50" y="30" width="120" height="3" fill="#414c32" opacity="0.12"/>
+    <rect x="50" y="40" width="80" height="3" fill="#778464" opacity="0.15"/>
+    <rect x="50" y="50" width="50" height="3" fill="#323b4c" opacity="0.1"/>
+    <circle cx="220" cy="40" r="22" fill="none" stroke="#414c32" stroke-width="2" opacity="0.1"/>
+    <circle cx="220" cy="40" r="12" fill="none" stroke="#778464" stroke-width="1.5" opacity="0.12"/>
+    <circle cx="220" cy="40" r="4" fill="#414c32" opacity="0.15"/>
+    <rect x="290" y="15" width="3" height="50" fill="#323b4c" opacity="0.08"/>
+    <rect x="300" y="25" width="3" height="30" fill="#778464" opacity="0.1"/>
+    <rect x="310" y="32" width="3" height="16" fill="#414c32" opacity="0.12"/>
+    <polygon points="380,20 420,20 440,40 420,60 380,60 360,40" fill="none" stroke="#414c32" stroke-width="1.5" opacity="0.1"/>
+    <polygon points="390,30 410,30 420,40 410,50 390,50 380,40" fill="#778464" opacity="0.06"/>
+    <rect x="480" y="35" width="200" height="1.5" fill="#323b4c" opacity="0.08"/>
+    <rect x="490" y="40" width="180" height="1" fill="#414c32" opacity="0.06"/>
+    <circle cx="700" cy="40" r="30" fill="none" stroke="#778464" stroke-width="1" opacity="0.1"/>
+    <circle cx="700" cy="40" r="20" fill="none" stroke="#414c32" stroke-width="1" opacity="0.08"/>
+    <circle cx="700" cy="40" r="8" fill="#323b4c" opacity="0.07"/>
+    <rect x="760" y="20" width="4" height="40" fill="#414c32" opacity="0.08" rx="2"/>
+    <rect x="775" y="28" width="4" height="24" fill="#778464" opacity="0.1" rx="2"/>
+    <rect x="790" y="33" width="4" height="14" fill="#323b4c" opacity="0.08" rx="2"/>
+    <rect x="850" y="30" width="120" height="3" fill="#414c32" opacity="0.1"/>
+    <rect x="850" y="40" width="90" height="3" fill="#778464" opacity="0.12"/>
+    <rect x="850" y="50" width="60" height="3" fill="#323b4c" opacity="0.08"/>
+    <polygon points="1020,20 1060,40 1020,60 980,40" fill="none" stroke="#414c32" stroke-width="1.5" opacity="0.1"/>
+    <polygon points="1020,28 1048,40 1020,52 992,40" fill="#778464" opacity="0.06"/>
+    <circle cx="1120" cy="40" r="25" fill="none" stroke="#323b4c" stroke-width="1.5" opacity="0.08"/>
+    <line x1="1095" y1="40" x2="1145" y2="40" stroke="#414c32" stroke-width="1" opacity="0.1"/>
+    <line x1="1120" y1="15" x2="1120" y2="65" stroke="#778464" stroke-width="1" opacity="0.1"/>
+  </svg>
+</div>
+
 <!-- COMPETÊNCIAS -->
 <section id="competencias">
   <div class="section-label">O que faço</div>
@@ -713,6 +809,26 @@
 </section>
 
 <hr class="divider">
+
+<!-- DECO STRIP 3 -->
+<div class="deco-strip" style="background:#F4F5F2;">
+  <svg viewBox="0 0 1200 50" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:50px;">
+    <rect x="0" y="23" width="1200" height="1" fill="#414c32" opacity="0.05"/>
+    <rect x="0" y="24" width="300" height="2" fill="#414c32" opacity="0.12"/>
+    <rect x="320" y="23" width="150" height="2" fill="#778464" opacity="0.15"/>
+    <rect x="490" y="22" width="80" height="4" fill="#323b4c" opacity="0.08"/>
+    <rect x="590" y="21" width="30" height="6" fill="#414c32" opacity="0.1"/>
+    <rect x="640" y="23" width="200" height="2" fill="#778464" opacity="0.1"/>
+    <rect x="860" y="24" width="100" height="2" fill="#414c32" opacity="0.12"/>
+    <rect x="980" y="23" width="220" height="2" fill="#323b4c" opacity="0.08"/>
+    <circle cx="310" cy="25" r="5" fill="#414c32" opacity="0.15"/>
+    <circle cx="480" cy="25" r="4" fill="#778464" opacity="0.18"/>
+    <circle cx="580" cy="25" r="3" fill="#323b4c" opacity="0.12"/>
+    <circle cx="630" cy="25" r="5" fill="#414c32" opacity="0.15"/>
+    <circle cx="850" cy="25" r="4" fill="#778464" opacity="0.15"/>
+    <circle cx="970" cy="25" r="3" fill="#323b4c" opacity="0.12"/>
+  </svg>
+</div>
 
 <!-- EXPERIÊNCIAS -->
 <section id="experiencias">
@@ -788,6 +904,56 @@
 
 <hr class="divider">
 
+<!-- DECO STRIP 4 -->
+<div class="deco-strip" style="background:#F4F5F2;">
+  <svg viewBox="0 0 1200 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:70px;">
+    <rect x="0" y="0" width="1200" height="70" fill="none"/>
+    <g opacity="0.08">
+      <rect x="20" y="10" width="30" height="30" fill="#414c32" rx="2"/>
+      <rect x="60" y="20" width="20" height="20" fill="#778464" rx="2"/>
+      <rect x="90" y="15" width="25" height="25" fill="#323b4c" rx="2"/>
+      <rect x="125" y="25" width="15" height="15" fill="#414c32" rx="2"/>
+    </g>
+    <g opacity="0.07" transform="translate(200,5)">
+      <polygon points="30,0 60,50 0,50" fill="#323b4c"/>
+      <polygon points="70,10 90,45 50,45" fill="#778464"/>
+      <polygon points="110,5 125,35 95,35" fill="#414c32"/>
+    </g>
+    <g opacity="0.06" transform="translate(420,10)">
+      <circle cx="20" cy="25" r="20" fill="none" stroke="#414c32" stroke-width="3"/>
+      <circle cx="60" cy="25" r="15" fill="none" stroke="#778464" stroke-width="2"/>
+      <circle cx="92" cy="25" r="10" fill="none" stroke="#323b4c" stroke-width="2"/>
+      <circle cx="114" cy="25" r="6" fill="none" stroke="#414c32" stroke-width="1.5"/>
+      <circle cx="128" cy="25" r="3" fill="#778464"/>
+    </g>
+    <g opacity="0.09" transform="translate(620,8)">
+      <rect x="0" y="0" width="6" height="54" fill="#414c32" rx="3"/>
+      <rect x="14" y="10" width="6" height="34" fill="#778464" rx="3"/>
+      <rect x="28" y="18" width="6" height="18" fill="#323b4c" rx="3"/>
+      <rect x="42" y="24" width="6" height="6" fill="#414c32" rx="3"/>
+      <rect x="56" y="18" width="6" height="18" fill="#778464" rx="3"/>
+      <rect x="70" y="10" width="6" height="34" fill="#323b4c" rx="3"/>
+      <rect x="84" y="0" width="6" height="54" fill="#414c32" rx="3"/>
+    </g>
+    <g opacity="0.07" transform="translate(800,5)">
+      <line x1="0" y1="60" x2="40" y2="10" stroke="#414c32" stroke-width="2"/>
+      <line x1="40" y1="10" x2="80" y2="50" stroke="#778464" stroke-width="2"/>
+      <line x1="80" y1="50" x2="120" y2="15" stroke="#323b4c" stroke-width="2"/>
+      <line x1="120" y1="15" x2="160" y2="45" stroke="#414c32" stroke-width="2"/>
+      <circle cx="0" cy="60" r="3" fill="#414c32" opacity="0.5"/>
+      <circle cx="40" cy="10" r="3" fill="#778464" opacity="0.5"/>
+      <circle cx="80" cy="50" r="3" fill="#323b4c" opacity="0.5"/>
+      <circle cx="120" cy="15" r="3" fill="#414c32" opacity="0.5"/>
+      <circle cx="160" cy="45" r="3" fill="#778464" opacity="0.5"/>
+    </g>
+    <g opacity="0.08" transform="translate(1040,8)">
+      <rect x="0" y="10" width="30" height="30" fill="none" stroke="#414c32" stroke-width="2" rx="2"/>
+      <rect x="10" y="20" width="30" height="30" fill="none" stroke="#778464" stroke-width="2" rx="2"/>
+      <rect x="20" y="5" width="30" height="30" fill="none" stroke="#323b4c" stroke-width="1.5" rx="2"/>
+    </g>
+  </svg>
+</div>
+
 <!-- EDUCAÇÃO -->
 <section id="educacao">
   <div class="section-label">Formação</div>
@@ -816,13 +982,13 @@
   <div class="contact-inner">
     <div class="section-label">Fale comigo</div>
     <div class="section-title">Vamos conversar?</div>
-    <p class="contact-sub">Aberto a novas oportunidades e parcerias profissionais.</p>
+
     <div class="contact-links">
       <a href="mailto:ppamado07@gmail.com" class="contact-link">
         ✉ ppamado07@gmail.com
       </a>
-      <a href="tel:+5562993338927" class="contact-link">
-        ☎ (62) 99333-8927
+      <a href="https://wa.me/5562993338927" target="_blank" class="contact-link">
+        💬 (62) 99333-8927
       </a>
       <a href="https://www.linkedin.com/in/paulooamado" target="_blank" class="contact-link">
         in LinkedIn
